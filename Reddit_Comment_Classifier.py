@@ -3567,7 +3567,6 @@ streamlit
 scikit-learn
 joblib
 spacy
-python -m spacy download en_core_web_sm
 import streamlit as st
 import joblib
 import spacy
