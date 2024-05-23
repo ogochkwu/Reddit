@@ -3595,4 +3595,4 @@ if st.button('Classify'):
     else:
         st.write('Please enter a comment.')
 
-streamlit run Reddit_Comment_Classifier.py
+! streamlit run Reddit_Comment_Classifier.py
