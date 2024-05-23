@@ -3563,7 +3563,7 @@
   "nbformat": 4,
   "nbformat_minor": 0
 }
-streamlit
+pip install streamlit
 scikit-learn
 joblib
 spacy
