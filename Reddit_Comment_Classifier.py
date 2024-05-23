@@ -3563,3 +3563,38 @@
   "nbformat": 4,
   "nbformat_minor": 0
 }
+streamlit
+scikit-learn
+joblib
+spacy
+python -m spacy download en_core_web_sm
+import streamlit as st
+import joblib
+import spacy
+
+# Load spaCy model (if required by the preprocessing pipeline)
+nlp = spacy.load('en_core_web_sm')
+
+# Load the trained model and TF-IDF vectorizer
+model = joblib.load('svm_model.joblib')
+vectorizer = joblib.load('tfidf_vectorizer.joblib')
+
+# Streamlit app title
+st.title('Reddit Comment Classifier')
+
+# Input text box for user to enter a Reddit comment
+comment = st.text_area('Enter a Reddit comment:', '')
+
+# Classify the comment when the button is clicked
+if st.button('Classify'):
+    if comment:
+        # Transform the comment using the loaded TF-IDF vectorizer
+        comment_tfidf = vectorizer.transform([comment])
+
+        # Predict the sentiment using the loaded model
+        prediction = model.predict(comment_tfidf)
+
+        # Display the result
+        st.write('Prediction:', 'Positive' if prediction[0] == 1 else 'Negative')
+    else:
+        st.write('Please enter a comment.')
