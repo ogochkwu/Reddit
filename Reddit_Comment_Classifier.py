@@ -3566,7 +3566,6 @@
 
 import streamlit as st
 # Load spacy model (if required by the preprocessing pipeline)
-nlp = spacy.load('en_core_web_sm')
 
 # Load the trained model and TF-IDF vectorizer
 model = joblib.load('svm_model.joblib')
