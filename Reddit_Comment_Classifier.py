@@ -3594,5 +3594,3 @@ if st.button('Classify'):
         st.write('Prediction:', 'Positive' if prediction[0] == 1 else 'Negative')
     else:
         st.write('Please enter a comment.')
-
-! streamlit run Reddit_Comment_Classifier.py
