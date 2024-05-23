@@ -3565,8 +3565,6 @@
 }
 
 import streamlit as st
-import spacy
-
 # Load spacy model (if required by the preprocessing pipeline)
 nlp = spacy.load('en_core_web_sm')
 
